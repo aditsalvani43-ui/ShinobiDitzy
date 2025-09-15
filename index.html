@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ditzy Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>✨ Welcome to Ditzy Generator ✨</h1>
+    <p>Pilih mode di bawah untuk bersenang-senang dengan teks kamu!</p>
+  </header>
+
+  <main>
+    <div class="tabs">
+      <button onclick="setMode('repeat')">🔁 Repeated Text</button>
+      <button onclick="setMode('random')">🎲 Random Text</button>
+      <button onclick="setMode('letters')">🔡 Repeated Letters</button>
+      <button onclick="setMode('crazy')">🤪 Crazy Text</button>
+      <button onclick="setMode('emoji')">😊 Emoticons</button>
+      <button onclick="setMode('blank')">⬜ Blank Text</button>
+      <button onclick="setMode('bold')">🅱️ Bold Letters</button>
+      <button onclick="setMode('shuffle')">🔀 Shuffle Words</button>
+    </div>
+
+    <section class="generator">
+      <textarea id="inputText" placeholder="Tulis teks di sini..."></textarea>
+      <div class="controls">
+        <label for="repeatCount">Jumlah Ulang:</label>
+        <input type="number" id="repeatCount" value="3" min="1" max="100">
+      </div>
+      <button class="generateBtn" onclick="generate()">🚀 Generate</button>
+    </section>
+
+    <section class="result">
+      <h2>Hasil:</h2>
+      <div id="output"></div>
+      <button id="copyBtn" onclick="copyResult()">📋 Copy</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with ❤️ for fun | Ditzy Vercel</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+  </html>
